@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio update — Next.js App Router
 
-## Getting Started
+Copy `src/` into your existing Next.js project, replacing the existing `src/app/page.tsx` and `src/app/globals.css`, and adding `src/app/work/[slug]/page.tsx`, `src/components/ImageSlot.tsx`, and `src/lib/content.ts`.
 
-First, run the development server:
+Requires a Next.js App Router project with TypeScript and Tailwind CSS v4 (as created by current `create-next-app`).
 
-```bash
+## Assets
+- `public/profile.jpg` — headshot
+- `public/resume.pdf` — public resume
+- `public/work/cjsf.jpg` — experience photo
+- `public/work/contract-flow.jpg` — experience photo
+- `public/work/changescope.jpg` — project screenshot
+- `public/work/skillmatch.jpg` — project screenshot
+- `public/work/linux-shell.jpg` — project screenshot
+
+Missing images automatically show styled placeholders. Add images with those exact names to replace them. Do not upload private or confidential employer/client images without permission.
+
+## Customize
+- Edit `src/lib/content.ts` to update the card text, details, and technology tags. All detail pages are generated from this one file.
+- Update the placeholder LinkedIn URL in `src/app/page.tsx` to your real profile.
+- The resume link requires `public/resume.pdf`.
+- To add a project, append an entry to the `entries` array in `src/lib/content.ts`; the homepage and `/work/[slug]` page are created automatically.
+- Detail pages contain a clearly marked section for future screenshots, demos, architecture, and lessons learned.
+
+## Run
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
