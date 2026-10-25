@@ -11,6 +11,10 @@ export type Entry = {
   image: string;
   imageLabel: string;
   link?: string;
+  gallery?: {
+  src: string;
+  caption: string;
+}[];
 };
 
 export const entries: Entry[] = [
@@ -19,41 +23,57 @@ export const entries: Entry[] = [
     period: 'May 2026 – Present', location: 'Vancouver, BC',
     summary: 'Modernizing a legacy radio station website with a maintainable full-stack architecture and responsive user experiences.',
     bullets: [
-      'Designed 11 responsive page layouts and 15 reusable UI components in Figma, incorporating feedback from 8 stakeholder review sessions.',
-      'Defined application architecture and Git development workflows to support maintainable, ongoing feature development.',
-      'Migrating a legacy Drupal website to Next.js and Strapi, rebuilding 10 pages and implementing 5 full-stack features using JavaScript and REST APIs.'
-    ],
+  "Designed 11 responsive page layouts and 15 reusable UI components in Figma, incorporating feedback from 8 stakeholder review sessions.",
+  "Designed Next.js application architecture and established Git workflows to support modular development and collaborative feature delivery.",
+  "Migrating a legacy Drupal website to Next.js and Strapi, with 10 pages rebuilt and 5 full-stack features implemented using JavaScript and REST APIs."
+],
     technologies: ['Next.js', 'Strapi', 'JavaScript', 'REST APIs', 'Figma', 'Git'],
-    image: '/work/cjsf.jpg', imageLabel: 'CJSF website or team photo'
+    image: '/work/cjsf.jpg', imageLabel: 'CJSF website or team photo',
+    gallery: [
+  {
+    src: "/work/cjsf-website.jpg",
+    caption: "Website development and implementation",
+  },
+  {
+    src: "/work/cjsf-design.jpg",
+    caption: "Responsive UI designs and Figma prototypes",
+  },
+]
   },
   {
     slug: 'contract-flow', kind: 'experience', title: 'Full Stack Developer', subtitle: 'Contract Flow Solutions · BCIT Industry Project 1',
     period: 'Apr 2025 – Jun 2025', location: 'Vancouver, BC',
     summary: 'Built a Microsoft Word add-in for contract review and annotation, incorporating feedback from an industry sponsor.',
     bullets: [
-      'Developed a Microsoft Word add-in supporting 3 contract review and annotation features using TypeScript, Node.js, and Microsoft Office APIs.',
-      'Delivered a functional prototype through 4 development iterations, translating industry sponsor feedback into product improvements.'
-    ],
+  "Developed a Microsoft Word add-in supporting 3 contract review and annotation features using TypeScript, Node.js, and Microsoft Office APIs.",
+  "Delivered a functional prototype through 4 development iterations, translating industry sponsor feedback into product improvements."
+],
     technologies: ['TypeScript', 'Node.js', 'Microsoft Office APIs'],
+    gallery: [
+  {
+    src: "/work/contract-flow-demo.jpg",
+    caption: "Microsoft Word add-in prototype",
+  },
+],
     image: '/work/contract-flow.jpg', imageLabel: 'Contract Flow Solutions screenshot or project photo'
   },
   {
     slug: 'changescope', kind: 'project', title: 'ChangeScope', subtitle: 'Human–Computer Interaction Research',
     summary: 'A tool to help programmers evaluate suggested code edits through behavioral predictions and side-by-side execution.',
-    bullets: [
-      'Developing a React and TypeScript tool that helps programmers evaluate suggested code edits through behavioural predictions and side-by-side execution.',
-      'Designing a within-subjects study comparing 3 review conditions to measure edit-decision accuracy, explanation quality, usability, and perceived effort.'
-    ],
+    bullets:[
+  "Developing a React and TypeScript tool that helps programmers evaluate suggested code edits through behavioural predictions and side-by-side execution.",
+  "Designing a within-subjects study comparing 3 review conditions to measure edit-decision accuracy, explanation quality, usability, and perceived effort."
+],
     technologies: ['React', 'TypeScript', 'JavaScript', 'HCI Research'],
     image: '/work/changescope.jpg', imageLabel: 'ChangeScope interface screenshot'
   },
   {
     slug: 'skillmatch', kind: 'project', title: 'Skillmatch', subtitle: 'Job Matching & Machine Learning',
     summary: 'A React job-matching application connecting applicants to relevant postings through machine-learning inference.',
-    bullets: [
-      'Developed a React job-matching application integrating a Hugging Face machine-learning model to match applicant skills with relevant postings.',
-      'Architected 3 RESTful microservices connecting the frontend, application logic, and ML inference, enabling independent deployment and modular development.'
-    ],
+    bullets:[
+  "Developed a React job-matching application integrating a Hugging Face machine-learning model to match applicant skills with relevant postings.",
+  "Architected 3 RESTful microservices connecting the frontend, application logic, and ML inference, enabling independent deployment and modular development."
+],
     technologies: ['React', 'Microservices', 'REST APIs', 'Hugging Face ML'],
     image: '/work/skillmatch.jpg', imageLabel: 'Skillmatch application screenshot'
   },
@@ -61,9 +81,9 @@ export const entries: Entry[] = [
     slug: 'linux-shell', kind: 'project', title: 'Linux Shell', subtitle: 'Systems Programming',
     summary: 'A Unix-style command-line shell written in C with job control and signal handling.',
     bullets: [
-      'Built a Unix-style command-line shell in C supporting 5 built-in commands, background execution, and process management using POSIX system calls.',
-      'Implemented SIGINT signal handling and foreground/background job control using operating-system process APIs.'
-    ],
+  "Built a Unix-style command-line shell in C supporting 5 built-in commands, background execution, and process management using POSIX system calls.",
+  "Implemented SIGINT signal handling and foreground/background job control using operating-system process APIs."
+],
     technologies: ['C', 'Unix', 'Process Management', 'POSIX'],
     image: '/work/linux-shell.jpg', imageLabel: 'Linux Shell terminal screenshot'
   }

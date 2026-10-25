@@ -105,3 +105,52 @@ nav a,.back-link { color:#b2bfd2; }
   object-fit: contain;
   object-position: center;
 }
+
+
+/* Supporting screenshots on experience detail pages */
+
+.experience-gallery {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.experience-gallery h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.experience-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.experience-gallery-item {
+  margin: 0;
+  min-width: 0;
+}
+
+.experience-gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #ffffff;
+}
+
+.experience-gallery-item figcaption {
+  margin-top: 12px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #aab6c8;
+}
+
+@media (max-width: 700px) {
+  .experience-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
